@@ -1,0 +1,5 @@
+C:\Users\Lab AyED\Documents\8_QuinoSanchez\Etapa0\22_SueldoTotal\22_SueldoTotal\bin\Debug\22_SueldoTotal.exe.config
+C:\Users\Lab AyED\Documents\8_QuinoSanchez\Etapa0\22_SueldoTotal\22_SueldoTotal\bin\Debug\22_SueldoTotal.exe
+C:\Users\Lab AyED\Documents\8_QuinoSanchez\Etapa0\22_SueldoTotal\22_SueldoTotal\bin\Debug\22_SueldoTotal.pdb
+C:\Users\Lab AyED\Documents\8_QuinoSanchez\Etapa0\22_SueldoTotal\22_SueldoTotal\obj\Debug\22_SueldoTotal.exe
+C:\Users\Lab AyED\Documents\8_QuinoSanchez\Etapa0\22_SueldoTotal\22_SueldoTotal\obj\Debug\22_SueldoTotal.pdb

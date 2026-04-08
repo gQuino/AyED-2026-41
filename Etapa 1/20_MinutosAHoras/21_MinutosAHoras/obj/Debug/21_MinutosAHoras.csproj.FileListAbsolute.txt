@@ -1,0 +1,5 @@
+C:\Users\Lab AyED\Documents\8_QuinoSanchez\Etapa0\21_MinutosAHoras\21_MinutosAHoras\bin\Debug\21_MinutosAHoras.exe.config
+C:\Users\Lab AyED\Documents\8_QuinoSanchez\Etapa0\21_MinutosAHoras\21_MinutosAHoras\bin\Debug\21_MinutosAHoras.exe
+C:\Users\Lab AyED\Documents\8_QuinoSanchez\Etapa0\21_MinutosAHoras\21_MinutosAHoras\bin\Debug\21_MinutosAHoras.pdb
+C:\Users\Lab AyED\Documents\8_QuinoSanchez\Etapa0\21_MinutosAHoras\21_MinutosAHoras\obj\Debug\21_MinutosAHoras.exe
+C:\Users\Lab AyED\Documents\8_QuinoSanchez\Etapa0\21_MinutosAHoras\21_MinutosAHoras\obj\Debug\21_MinutosAHoras.pdb

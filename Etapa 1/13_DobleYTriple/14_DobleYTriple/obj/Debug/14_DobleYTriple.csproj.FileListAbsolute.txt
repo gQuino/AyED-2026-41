@@ -1,0 +1,6 @@
+C:\Users\Lab AyED\Documents\8_QuinoSanchez\Etapa0\14_DobleYTriple\14_DobleYTriple\bin\Debug\14_DobleYTriple.exe.config
+C:\Users\Lab AyED\Documents\8_QuinoSanchez\Etapa0\14_DobleYTriple\14_DobleYTriple\bin\Debug\14_DobleYTriple.exe
+C:\Users\Lab AyED\Documents\8_QuinoSanchez\Etapa0\14_DobleYTriple\14_DobleYTriple\bin\Debug\14_DobleYTriple.pdb
+C:\Users\Lab AyED\Documents\8_QuinoSanchez\Etapa0\14_DobleYTriple\14_DobleYTriple\obj\Debug\14_DobleYTriple.csprojResolveAssemblyReference.cache
+C:\Users\Lab AyED\Documents\8_QuinoSanchez\Etapa0\14_DobleYTriple\14_DobleYTriple\obj\Debug\14_DobleYTriple.exe
+C:\Users\Lab AyED\Documents\8_QuinoSanchez\Etapa0\14_DobleYTriple\14_DobleYTriple\obj\Debug\14_DobleYTriple.pdb
