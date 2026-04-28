@@ -21,12 +21,17 @@ namespace _12_FizzBuzz
                 {
                     Console.WriteLine("fizzbuzz");
                 }
-                else if ( numero %3 == 0 )
+                else if (numero % 5 == 0)
                 {
-                    Console.WriteLine("fizzbuzz");
-
-                    
+                    Console.WriteLine("buzz");
                 }
+                else if (numero % 3 == 0)
+                {
+                    Console.WriteLine("fizz");
+
+                }
+                else
+                    Console.WriteLine(numero);
                
                 
 
