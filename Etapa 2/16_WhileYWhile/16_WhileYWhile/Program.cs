@@ -52,7 +52,15 @@ namespace _16_WhileYWhile
                     Console.WriteLine(while3);
                 }
             }
-
+            Console.WriteLine("While 4");
+            while (while4 > 1)
+            {
+                while3--;
+                if (while4 > 100)
+                {
+                    Console.WriteLine(while3);
+                }
+            }
             Console.ReadKey();
         }
     }
