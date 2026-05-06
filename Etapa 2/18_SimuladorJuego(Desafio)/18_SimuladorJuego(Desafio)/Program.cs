@@ -26,13 +26,12 @@ namespace _18_SimuladorJuego_Desafio_
             Console.WriteLine("                |                                   |        |                             |");
             Console.WriteLine("                |        Bienvenido al juego        |        |     Sobrevive a la Isla     |");
             Console.WriteLine("                |___________________________________|        |_____________________________|");
-                Console.WriteLine("");
-                Console.WriteLine("");
-                Console.WriteLine("");
-
-                Console.WriteLine("|Dias: " + dia);
-            Console.WriteLine("|Vida: " + vida);
-            Console.WriteLine("|Hambre: " + hambre);
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("       |Dias: " + dia);
+            Console.WriteLine("       |Vida: " + vida);
+            Console.WriteLine("       |Hambre: " + hambre);
             Console.WriteLine("|Inventario: ");
             Console.WriteLine("Comida Cruda: " + comidacruda);
             Console.WriteLine("Comida Cocinada: " + comidacocida);
