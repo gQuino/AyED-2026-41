@@ -84,13 +84,13 @@ namespace _18_SimuladorJuego_Desafio_
                         Console.Clear();
                         Console.WriteLine("Saliste a explorar,con suerte encuentras algo");
                         Console.WriteLine(" ");
-                        Console.WriteLine("Yyyyyy....");
+                        Console.WriteLine("Y");
                         Console.WriteLine(" ");
                         probabilidad = rand.Next(1, 100);
                         if (probabilidad <= 50)
                         {
-                            Console.WriteLine("Tuviste suerte encontraste un material util");
-                            Console.WriteLine("Pero perdiste una vida por el cansancio");
+                            Console.WriteLine("Tuviste suerte encontraste un material");
+                            Console.WriteLine("Pero perdiste una vida por que te has cansado");
                             Console.WriteLine(" ");
                             Console.WriteLine("Presione una tecla para continuar");
                             materiales_utiles++;
@@ -100,7 +100,7 @@ namespace _18_SimuladorJuego_Desafio_
                         }
                         else if (probabilidad > 50 && probabilidad <= 80)
                         {
-                            Console.WriteLine("Lastima no encontraste nada util");
+                            Console.WriteLine("No encontraste nada util");
                             Console.WriteLine("Y perdiste una vida");
                             Console.WriteLine(" ");
                             Console.WriteLine("Presione una tecla para continuar");
