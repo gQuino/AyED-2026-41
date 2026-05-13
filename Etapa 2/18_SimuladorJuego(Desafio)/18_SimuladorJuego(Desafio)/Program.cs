@@ -20,10 +20,13 @@ namespace _18_SimuladorJuego_Desafio_
             bool fogata = false;
             bool refugio = false;
             int probabilidad;
+
             Console.WriteLine("BIENVENIDO AL JUEGO");
             Console.WriteLine("TRAMA: SOBREVIVE EN LA ISLA");
             Random rand = new Random();
-            while (opcion != 8)
+
+           
+            while (opcion != 8 && vida > 0)
             {
                 Console.Clear();
                 Console.WriteLine(" __________________            _______________________");
@@ -49,20 +52,19 @@ namespace _18_SimuladorJuego_Desafio_
                 Console.WriteLine("7. Descansar");
                 Console.WriteLine("8. Salir");
                 Console.Write("Elige una opcion: ");
+
                 opcion = int.Parse(Console.ReadLine());
+
                 switch (opcion)
                 {
                     case 1:
                         Console.Clear();
                         Console.WriteLine("Saliste a buscar comida");
-
                         probabilidad = rand.Next(1, 100);
                         if (probabilidad <= 60)
                         {
                             Console.WriteLine("Y tuviste suerte si encontraste");
                             Console.WriteLine("Pero por esta busqueda perdiste un punto de vida por el cansancio");
-                            Console.WriteLine(" ");
-                            Console.WriteLine("Presione una tecla para continuar");
                             cantidad_de_comida_cruda = cantidad_de_comida_cruda + 2;
                             dia++;
                             vida--;
@@ -70,29 +72,22 @@ namespace _18_SimuladorJuego_Desafio_
                         }
                         else
                         {
-                            Console.Clear();
-                            Console.WriteLine("Que pena....");
-                            Console.WriteLine("No conseguiste nada");
+                            Console.WriteLine("Que pena.... No conseguiste nada");
                             Console.WriteLine("Por esta busqueda perdiste un punto de vida por el cansancio");
-                            Console.WriteLine("Presione una tecla para continuar");
                             dia++;
                             vida--;
                             hambre = hambre - 2;
                         }
                         break;
+
                     case 2:
                         Console.Clear();
-                        Console.WriteLine("Saliste a explorar,con suerte encuentras algo");
-                        Console.WriteLine(" ");
-                        Console.WriteLine("Y");
-                        Console.WriteLine(" ");
+                        Console.WriteLine("Saliste a explorar...");
                         probabilidad = rand.Next(1, 100);
                         if (probabilidad <= 50)
                         {
                             Console.WriteLine("Tuviste suerte encontraste un material");
                             Console.WriteLine("Pero perdiste una vida por que te has cansado");
-                            Console.WriteLine(" ");
-                            Console.WriteLine("Presione una tecla para continuar");
                             materiales_utiles++;
                             dia++;
                             vida--;
@@ -100,149 +95,136 @@ namespace _18_SimuladorJuego_Desafio_
                         }
                         else if (probabilidad > 50 && probabilidad <= 80)
                         {
-                            Console.WriteLine("No encontraste nada util");
-                            Console.WriteLine("Y perdiste una vida");
-                            Console.WriteLine(" ");
-                            Console.WriteLine("Presione una tecla para continuar");
+                            Console.WriteLine("No encontraste nada util y perdiste una vida");
                             dia++;
                             vida--;
                             hambre = hambre - 2;
                         }
                         else
                         {
-                            Console.WriteLine("Uh,tuviste un accidente y te provoco la perdida de dos vidas =( ");
-                            Console.WriteLine(" ");
-                            Console.WriteLine("Presione una tecla para continuar");
+                            Console.WriteLine("Uh, tuviste un accidente y perdiste dos vidas =( ");
                             dia++;
                             vida = vida - 2;
                             hambre = hambre - 2;
                         }
                         break;
+
                     case 3:
                         Console.Clear();
-                        if (refugio == false && materiales_utiles < 7)
+                        if (refugio == false && materiales_utiles < 3)
                         {
-                            Console.Clear();
-                            Console.WriteLine("No tiene materiales suficientes para construir uno");
-                            Console.WriteLine("Necesitas al menos 7 materiales utiles");
-                            Console.WriteLine(" ");
-                            Console.WriteLine("Presione una tecla para continuar");
+                            Console.WriteLine("No tiene materiales suficientes");
                         }
                         else if (refugio == true)
                         {
-                            Console.Clear();
                             Console.WriteLine("Ya tienes un refugio");
-                            Console.WriteLine(" ");
-                            Console.WriteLine("Presione una tecla para continuar");
                         }
-                        else if (refugio == false && materiales_utiles >= 7)
+                        else
                         {
-                            Console.Clear();
-                            Console.WriteLine("Felicidades contruiste tu refugio");
-                            Console.WriteLine("Pero perdiste una vida por el cansancio");
-                            Console.WriteLine(" ");
-                            Console.WriteLine("Presione una tecla para continuar");
+                            Console.WriteLine("Felicidades contruiste tu refugio. Perdiste una vida.");
+                            refugio = true;
                             dia++;
                             vida--;
                             hambre = hambre - 2;
-
                         }
                         break;
+
                     case 4:
                         Console.Clear();
-                        if (refugio == false && materiales_utiles > 2)
+                        if (refugio == true && materiales_utiles >= 2)
                         {
-                            Console.Clear();
                             Console.WriteLine("Felicidades encendiste tu fogata");
-                            Console.WriteLine("Presione una tecla para continuar");
                             fogata = true;
                         }
                         else if (fogata == true)
                         {
-                            Console.Clear();
                             Console.WriteLine("Usted ya tiene la fogata encendida");
-                            Console.WriteLine("Presione una tecla para continuar");
                         }
                         else
                         {
-                            Console.Clear();
-                            Console.WriteLine("Necesitas un refugio y al menos dos materiales utiles para encenderla");
-                            Console.WriteLine("Presione una tecla para continuar");
+                            Console.WriteLine("Necesitas un refugio y materiales para encenderla");
                         }
                         break;
+
                     case 5:
                         Console.Clear();
-                        if (fogata = true && cantidad_de_comida_cruda >= 1)
+                        if (fogata == true && cantidad_de_comida_cruda >= 1)
                         {
-                            Console.WriteLine("Cocinaste una comida cruda almacena");
-                            Console.WriteLine("Presione una tecla para continuar");
+                            Console.WriteLine("Cocinaste una comida cruda");
                             cantidad_de_comida_cruda--;
                             cantidad_de_comida_cocida++;
                             dia++;
                         }
-                        else if (fogata = false || cantidad_de_comida_cruda < 1)
+                        else
                         {
-                            Console.WriteLine("No podes cocinar tu comida,necesitas tener la fogata encendida");
-                            Console.WriteLine("Recorda si tenes la fogata encendida para cocinar necesitas al menos UNA UNIDAD de comida cruda");
-                            Console.WriteLine("Presione una tecla para continuar");
+                            Console.WriteLine("No podes cocinar (necesitas fogata y comida)");
                         }
                         break;
+
                     case 6:
                         Console.Clear();
                         if (cantidad_de_comida_cocida >= 1)
                         {
-                            Console.WriteLine("Consumite una unidad de comida cocida");
-                            Console.WriteLine("Se sumo 4 unidades de hambre");
-                            Console.WriteLine("Presione una tecla para continuar");
+                            Console.WriteLine("Consumiste comida cocida. +4 hambre");
                             cantidad_de_comida_cocida--;
-                            if (hambre == 10)
-                            {
-                                Console.WriteLine("Tenes las 10 unidades de hambre completas");
-                                Console.WriteLine("Presione una tecla para continuar");
-                            }
-                            else if (hambre != 10)
-                            {
-                                if (hambre >= 7)
-                                {
-                                    while (hambre < 10)
-                                    {
-                                        hambre++;
-                                    }
-                                }
-                                else if (hambre <= 6)
-                                {
-                                    hambre = hambre + 4;
-                                }
-                            }
+                            hambre = (hambre + 4 > 10) ? 10 : hambre + 4;
+                        }
+                        else
+                        {
+                            Console.WriteLine("No tienes comida cocida");
                         }
                         break;
+
                     case 7:
                         Console.Clear();
                         if (refugio == true)
                         {
-                            if (vida == 10)
+                            if (vida >= 10) Console.WriteLine("Vida completa");
+                            else
                             {
-                                Console.WriteLine("Tiene las 10 unidades de vida completas");
+                                Console.WriteLine("Descansaste, sumaste 3 de vida");
+                                vida = (vida + 3 > 10) ? 10 : vida + 3;
                             }
-                            if (vida >= 8)
-                            {
-                                Console.WriteLine("Descansaste,sumaste 3 unidades de vida");
-                                while (vida < 10)
-                                {
-                                    vida++;
-                                }
-                            }
-                            else if (vida <= 7)
-                            {
-                                Console.Write("Descansaste,sumaste 3 unidades de vida");
-                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("No tienes un refugio");
                         }
                         break;
 
-
+                    case 8:
+                        Console.Clear();
+                        Console.WriteLine("Has salido del juego.");
+                        break;
                 }
-                Console.ReadKey();
+
+                
+                if (vida <= 0)
+                {
+                    Console.Clear();
+                    Console.WriteLine(" _______________________________");
+                    Console.WriteLine("|       ¡HAS PERDIDO!           |");
+                    Console.WriteLine("|   Tu vida ha llegado a 0.     |");
+                    Console.WriteLine("| Sobreviviste " + dia + " días |");
+                    Console.WriteLine("|_______________________________|");
+                    Console.WriteLine("Presiona cualquier tecla para cerrar...");
+                    Console.ReadKey();
+                }
+                else if (opcion != 8)
+                {
+                    Console.WriteLine("\nPresione una tecla para continuar");
+                    Console.ReadKey();
+                }
             }
+
+            
+            if (opcion == 8 && vida > 0)
+            {
+                Console.WriteLine("Has sobrevivido a la isla " + dia + " dias!");
+                
+            }
+            Console.ReadKey();
+        }
         }
     }
 }
