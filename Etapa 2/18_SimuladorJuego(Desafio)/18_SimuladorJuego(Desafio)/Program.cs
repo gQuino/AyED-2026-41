@@ -225,7 +225,7 @@ namespace _18_SimuladorJuego_Desafio_
             }
             Console.ReadKey();
         }
-        }
+        
     }
 }
 
